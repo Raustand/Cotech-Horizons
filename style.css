@@ -9,16 +9,21 @@ body{
 .header {
     background-color:#fff;
     border-radius: 10px;
-    margin: 0 80px 10px 70px;
-    padding: 30px 5px 5px 20px;
+    margin: 0 30px 10px 30px;
+    padding: 10px 5px 5px 10px;
 }
 
 .email-contact{
     text-align: end;
     padding: 0 100px;
     font-weight: bold;
-    color: rgb(5, 5, 125);
+    color: #4b32d4;
 }
+
+span.contact{
+    padding: 0 15px 0 0;
+}
+
 .logo {
     margin: 0 0 0 50px;
 }
@@ -52,7 +57,6 @@ body{
 }
 
 /* Top image bar */
-/* === Enhanced Hero Section Styles === */
 .welcome-text {
   font-size: 1.2rem;
   font-style: italic;
@@ -84,6 +88,10 @@ body{
   background: linear-gradient(to right, #8d4fff, #d44bef);
   border-radius: 20px;
   z-index: -1;
+}
+
+.cta-buttons:hover{
+    color: #983c71;
 }
 
 .subtitle {
@@ -185,17 +193,48 @@ body{
   }
 }
 
-
-/* FAQs & Get in touch */
-
-/*  */
-section.rate-review{
-    background-color: #ec0e0e;
-    padding: 30px;
+/* Statistics section */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px;
+  background-color: #f5f5f5;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
-section.fa-FAQs-section{
-    background-color: #576b26;
+.stat-box {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 200px;
+}
+
+.stat-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.stat-box h2 {
+  color: #007BFF;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.stat-box p {
+  font-size: 20px;
+  color: #333;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+/* FAQs & Get in touch */
+section.FAQs-section{
+    background-color: white;
     padding: 30px;
 }
 
@@ -208,22 +247,41 @@ section.fa-FAQs-section{
     gap: 0;
 }
 
-.fa-FAQs{
-    background: rgb(21, 32, 28);
-    color: #737390;
+/* FAQs */
+.faq-section{
+    background: rgb(229, 235, 233);
+    color: black;
+    text-align: start;
+    border: white;
+    padding: 0 10px 0 15px;
+    border-radius: 20px;
 }
 
-.fa-FAQs h3{
+.faq{
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+}
+
+.faq-section h3{
     color: #0e4dec;
     padding: 0 150px ;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.fa-contact-card{
+.question {
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Contact Us form */
+.contact-section{
     background: #201d1d;
     color: #737390;
 }
 
-.fa-contact-card h3{
+.contact-section h3{
     color: #0e4dec;
     padding: 0 150px;
 }
@@ -292,10 +350,11 @@ section.fa-FAQs-section{
 .footer-col ul li {
     margin-bottom: 10px;
 }
-
+/* logo link spacing */
 i{
     padding: 0 5px 0 0;
 }
+
 .footer-col a {
     color: #eee;
     text-decoration: none;
@@ -324,7 +383,7 @@ i{
 }
 
 .social-links a:hover {
-    color: #1b1c79;
+    color: #4b32d4;
 }
 
 .copyrightText {
