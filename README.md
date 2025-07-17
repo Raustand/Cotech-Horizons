@@ -1,2 +1,2 @@
 # Cotech-Horizons
-IT solution company
+IT company
