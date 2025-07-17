@@ -197,17 +197,16 @@ span.contact{
 .stats-section {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   padding: 50px;
-  background-color: #f5f5f5;
+  background-color: #fff;
   text-align: center;
   flex-wrap: wrap;
 }
 
 .stat-box {
-  background: white;
+  background: #f5f5f5;
   padding: 30px;
-  border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 200px;
@@ -231,30 +230,72 @@ span.contact{
   font-weight: bold;
 }
 
+/* Customers review */
+.review{
+  background-color: #fff;
+  padding:0 10px;
+  margin: 0;
+}
 
+.review .box-container{
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.review .box-container .box{
+  flex: 1 1 30rem;
+  box-shadow: 0 .5rem 1.5rem rb;
+  padding: 3rem 2rem;
+  position: relative;
+}
+.review h1{
+  color: #0e4dec;
+  padding: 0 150px ;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.review .box-container p{
+  font-size: 1.5rem;
+}
+.review .box-container .box .user img{
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.review .box-container .box .stars{
+  color: yellow;
+  font-size: 1rem;
+}
 /* FAQs & Get in touch */
 section.FAQs-section{
-    background-color: white;
-    padding: 30px;
+  background-color: white;
+  padding: 0 30px;
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-    gap: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  gap: 0;
 }
 
 /* FAQs */
 .faq-section{
-    background: rgb(229, 235, 233);
-    color: black;
-    text-align: start;
-    border: white;
-    padding: 0 10px 0 15px;
-    border-radius: 20px;
+  background: rgb(229, 235, 233);
+  color: black;
+  text-align: start;
+  border: white;
+  padding: 0 10px 0 55px;
+  border-radius: 10px;
+  margin: 0 1px 0 150px;
+  
 }
 
 .faq{
@@ -263,10 +304,10 @@ section.FAQs-section{
 }
 
 .faq-section h3{
-    color: #0e4dec;
-    padding: 0 150px ;
-    text-align: center;
-    margin-bottom: 30px;
+  color: #0e4dec;
+  padding: 0 150px ;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .question {
@@ -276,15 +317,282 @@ section.FAQs-section{
 }
 
 /* Contact Us form */
-.contact-section{
-    background: #201d1d;
-    color: #737390;
+.fa-contact-card{
+  background: whitesmoke;
+  color: #737390;
 }
 
-.contact-section h3{
-    color: #0e4dec;
-    padding: 0 150px;
+.fa-contact-card h3{
+  color: #0e4dec;
+  padding: 0 150px;
 }
+
+/* Base styles */
+.fa-contact-card {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+}
+
+.contact-box {
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-row label {
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-row input,
+.form-row textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #f0f8ff;
+}
+
+.submit-button {
+  text-align: right;
+}
+
+.submit-button button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .fa-contact-card {
+    padding: 20px 15px;
+  }
+
+  .submit-button {
+    text-align: center;
+  }
+
+  .submit-button button {
+    width: 100%;
+  }
+}
+
+/* Whatsapp setting */
+.whatsapp-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    justify-content: flex-start;   
+    align-items: flex-start;
+    padding: 10px 0 0 20px;
+   
+}
+
+.whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: #fff;
+    background: #25D366;
+    border-radius: 24px;
+    padding: 10px 20px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    transition: 0.2s, color 0.2s;
+    font-weight: bold;
+    gap: 8px;
+}
+
+.whatsapp-link i {
+    font-size: 1.7rem;
+}
+
+.whatsapp-link:hover {
+    background: #128c7e;
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+    .whatsapp-bg {
+        justify-content: center;
+        padding: 10px 0 0 0;
+    }
+    .whatsapp-link {
+        width: 90%;
+        justify-content: center;
+        font-size: 1.1rem;
+    }
+}
+
+/* About Us */
+ .about{
+  padding: 0;
+  margin: 0;
+  background: #fff;
+ }
+
+p.text{
+  font-size: 20px;
+  color: #333;
+  margin-top: 10px;
+  text-align: start;
+  padding: 15px;
+}
+
+.aboutus {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px;
+  margin: 0;
+  background-color: #fff;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.aboutus .stat-box {
+  background: #f5f5f5;
+  padding: 0 80px 50px 80px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 200px;
+}
+
+ .about h1{
+  color: #0e4dec;
+  padding: 0 150px ;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about h2{
+  text-align: center;
+  margin: 0 -30px;
+  padding: 15px;
+}
+.submit-button {
+  text-align: center;
+}
+
+.submit-button button {
+    background: #0078d7;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.submit-button button:hover {
+    background: #005fa3;
+}
+
+/* Member Section Enhanced */
+.members-section {
+  padding: 40px 20px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.member-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+}
+
+.member-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.member-card h3 {
+  font-size: 18px;
+  color: #222;
+  margin: 10px 0 5px;
+}
+
+.member-card p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.member-social a {
+  margin: 0 8px;
+  font-size: 18px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.member-social a:hover {
+  color: #007bff;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+
 
 /* Footer */
 .footer {
@@ -383,7 +691,24 @@ i{
 }
 
 .social-links a:hover {
-    color: #4b32d4;
+  color: #0e4dec;
+}
+
+/* Gegraphical location style */
+.iframe-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: #00255b;
+  padding: 40px 0;
+}
+
+iframe{
+  border-radius: 10px;
+  width: 250px;
+  height: 250px;
+  margin: 10px 0 0 -30px;
 }
 
 .copyrightText {
