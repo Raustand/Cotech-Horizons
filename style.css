@@ -559,7 +559,12 @@ p.text{
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 15px;
+  border: 4px solid #4b32d4;
+  transition: transform 0.3s ease;
+}
+
+.member-card a:hover img {
+  transform: scale(1.05);
 }
 
 .member-card h3 {
@@ -577,7 +582,7 @@ p.text{
 .member-social a {
   margin: 0 8px;
   font-size: 18px;
-  color: #555;
+  color: #ed46b0;
   transition: color 0.3s ease;
 }
 
