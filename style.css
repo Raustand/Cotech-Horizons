@@ -876,10 +876,13 @@ p.text{
 
 /* Contact us */
 .contactus{
+  margin: 5px;
+  padding: 0;
   display: flex;
 }
 
-.mail-info{
+/* .mail-info{ 
+  background: #0078d7;
   margin: 0 0 300px 150px;
   padding: 0 180px 0 0;
   min-width: 180px;
@@ -904,12 +907,11 @@ p.text{
 
 .mail-info ul li {
     margin-bottom: 10px;
-}
+/* } */
 
 
 /* Gegraphical location style */
 .map-container{
-margin: 300px 25px 0 -500px;
 padding: 0 30px;
 }
 
@@ -917,15 +919,14 @@ padding: 0 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
-  background: #00255b;
+  min-height: 180vh;
   padding: 40px 0 0 -250px;
 }
 
 iframe{
   border-radius: 10px;
-  width: 400px;
-  height: 250px;
+  width: 420px;
+  height: 550px;
   margin: 20px 0 0 30px;
 }
 
