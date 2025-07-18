@@ -56,25 +56,74 @@ span.contact{
     color: rgb(153, 5, 5);
 }
 
-/* Navbar Toggler Styles */
-.navbar-toggler {
+/* Hamburger styles */
+.hamburger {
   display: none;
   flex-direction: column;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
   cursor: pointer;
-  margin-right: 30px;
+  padding: -20px;
   z-index: 1001;
 }
 
-.navbar-toggler span {
-  height: 4px;
-  width: 100%;
-  background: #2b2ed7;
-  margin: 5px 0;
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #000; /* Change to match your design */
+  margin: 4px 0;
   border-radius: 2px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Navigation links container */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Responsive settings */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    display: none;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  /* Hamburger turns into X */
+  #menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  #menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
 }
 
 /* Responsive Navbar */
@@ -376,16 +425,65 @@ section.FAQs-section{
   position: relative;
 }
 
-/* Contact Us form */
-.fa-contact-card{
-  background: whitesmoke;
-  color: #737390;
+/* Responsive adjustments for FAQs section */
+@media (max-width: 1024px) {
+  .faq-section {
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  .faq-section h3 {
+    padding: 0;
+  }
 }
 
-.fa-contact-card h3{
-  color: #0e4dec;
-  padding: 0 150px;
+@media (max-width: 768px) {
+  .FAQs-section {
+    padding: 30px 15px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .faq-section {
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .faq-section h3 {
+    font-size: 1.5rem;
+    padding: 0;
+    text-align: center;
+  }
+
+  .faq .question {
+    font-size: 1rem;
+  }
+
+  .faq .answer {
+    font-size: 0.95rem;
+  }
 }
+
+@media (max-width: 480px) {
+  .faq-section {
+    padding: 15px;
+  }
+
+  .faq-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .faq .question,
+  .faq .answer {
+    font-size: 0.9rem;
+  }
+}
+
 
 /* Base styles */
 .fa-contact-card {
@@ -505,7 +603,7 @@ section.FAQs-section{
     color: #fff;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 300px) {
     .whatsapp-bg {
         justify-content: center;
         padding: 10px 0 0 0;
@@ -881,35 +979,6 @@ p.text{
   display: flex;
 }
 
-/* .mail-info{ 
-  background: #0078d7;
-  margin: 0 0 300px 150px;
-  padding: 0 180px 0 0;
-  min-width: 180px;
-}
-
-.mail-info h4 {
-    text-align: left;
-    font-size: 1.1em;
-    color: rgb(185, 185, 185);
-    margin-bottom: 16px;
-    margin: 16px -80px 0 60px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.mail-info ul {
-  padding: 16px;
-  margin: 0 -80px 0 0;
-    list-style: none;
-    text-align: left;
-}
-
-.mail-info ul li {
-    margin-bottom: 10px;
-/* } */
-
-
 /* Gegraphical location style */
 .map-container{
 padding: 0 30px;
@@ -928,6 +997,58 @@ iframe{
   width: 420px;
   height: 550px;
   margin: 20px 0 0 30px;
+}
+
+/* Responsive Contact Section */
+@media (max-width: 1024px) {
+  .contactus {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 400px;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 600px;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 300px) {
+  .contact-section {
+    padding: 30px 10px;
+  }
+
+  .contactus {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .map-container iframe {
+    height: 300px;
+  }
+
+  .contact-form {
+    padding: 20px 15px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
 }
 
 /* Footer */
@@ -1043,29 +1164,94 @@ i{
     margin: 0;
 }
 
-/* Responsive styles */
-@media (max-width: 900px) {
-    .container.flex {
-        gap: 16px;
-    }
-    .footer-col {
-        min-width: 150px;
-    }
+/* Footer Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px;
+  }
+
+  .container.flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 0;
+  }
+
+  .container.flex .logo,
+  .footer-col {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-logo {
+    width: 250px;
+    height: auto;
+  }
+
+  .footer-text {
+    padding: 0 10px;
+    font-size: 0.9rem;
+  }
+
+  .footer-col h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .footer-col ul {
+    padding: 0;
+  }
+
+  .footer-col ul li {
+    margin-bottom: 8px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .social-links a {
+    font-size: 1.3rem;
+  }
 }
 
-@media (max-width: 700px) {
-    .container.flex {
-        flex-direction: column;
-        align-items: center;
-        gap: 24px;
-    }
-    .footer-col {
-        min-width: 0;
-        width: 100%;
-        text-align: center;
-        padding: 0;
-    }
-    .social-links {
-        justify-content: center;
-    }
+@media (max-width: 480px) {
+  .footer-text {
+    font-size: 0.85rem;
+  }
+
+  .footer-col h4 {
+    font-size: 0.95rem;
+  }
+
+  .social-links {
+    gap: 12px;
+  }
+
+  .copyrightText {
+    font-size: 0.85rem;
+    padding: 10px 5px;
+  }
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  text-decoration: none;
+  font-size: 24px;
+  background-color: #0d6efd;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background-color: #084298;
 }
