@@ -56,7 +56,7 @@ span.contact{
     color: rgb(153, 5, 5);
 }
 
-/* Hamburger styles */
+/* Menu toggler Hamburger styles */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -68,7 +68,7 @@ span.contact{
 .hamburger span {
   height: 3px;
   width: 25px;
-  background: #000; /* Change to match your design */
+  background: bl; 
   margin: 4px 0;
   border-radius: 2px;
   transition: all 0.3s ease;
