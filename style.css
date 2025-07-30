@@ -87,8 +87,10 @@ span.contact{
   align-items: center;
 }
 
+
+
 /* Responsive settings */
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .hamburger {
     display: flex;
     position: absolute;
@@ -127,7 +129,7 @@ span.contact{
 }
 
 /* Responsive Navbar */
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .navbar ul {
     position: absolute;
     top: 60px;
@@ -154,7 +156,7 @@ span.contact{
   }
 }
 
-/* Optional: Animate toggler to X when open */
+/* Animate toggler to X when open */
 .navbar-toggler.active span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
 }
@@ -1258,3 +1260,4 @@ i{
 .back-to-top:hover {
   background-color: #084298;
 }
+
