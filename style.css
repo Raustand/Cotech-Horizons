@@ -126,6 +126,7 @@ span.contact{
   #menu-toggle:checked + .hamburger span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
   }
+  
 }
 
 /* Responsive Navbar */
@@ -963,7 +964,7 @@ p.text{
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .submit-btn:hover {
@@ -976,6 +977,34 @@ p.text{
     flex-direction: column;
   }
 }
+
+/* Contact form responsive styles */
+@media (max-width: 900px) {
+  .contact-form {
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.07);
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 10px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .submit-btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+}
+
+
+
 
 /* Contact us */
 .contactus{
@@ -1253,7 +1282,7 @@ i{
   padding: 10px 14px;
   border-radius: 50%;
   display: inline-block;
-  transition: background 0.3s ease;
+  transition: 0.3s ease;
   z-index: 1000;
 }
 
