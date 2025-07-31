@@ -634,7 +634,7 @@ p.text{
   margin-top: 30px;
   text-align: center;
   padding: -25px;
-  margin: 2px -55px;
+  margin: 2px -75px;
 }
 
 .aboutus {
@@ -665,7 +665,7 @@ p.text{
 
 .about h2{
   text-align: center;
-  margin: 0 -30px;
+  margin: 0 -50px;
   padding: 15px;
 }
 .submit-button {
@@ -676,6 +676,7 @@ p.text{
     background: #0078d7;
     color: #fff;
     border: none;
+    margin: 20px 0 0 0;
     padding: 6px 10px;
     border-radius: 6px;
     font-size: 1rem;
