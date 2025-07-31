@@ -131,7 +131,11 @@ span.contact{
 
 /* Responsive Navbar */
 @media (max-width: 1180px) {
-  .navbar ul {
+  html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.navbar ul {
     position: absolute;
     top: 60px;
     right: 0;
