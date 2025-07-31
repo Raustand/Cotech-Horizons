@@ -634,7 +634,7 @@ p.text{
   margin-top: 30px;
   text-align: center;
   padding: -25px;
-  margin: 2px -75px;
+  margin: 2px -85px;
 }
 
 .aboutus {
@@ -649,7 +649,7 @@ p.text{
 }
 .aboutus .stat-box {
   background: #f5f5f5;
-  padding: 0 80px 50px 80px;
+  padding: 0 80px 30px 80px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 200px;
