@@ -357,7 +357,7 @@ span.contact{
   background-color: #fff;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1px;
 }
 
 .review .box-container .box{
@@ -404,13 +404,13 @@ section.FAQs-section{
 
 /* FAQs */
 .faq-section{
-  background: rgb(229, 235, 233);
+  background: rgb(5, 207, 139);
   color: black;
   text-align: start;
   border: white;
   padding: 0 10px 0 55px;
   border-radius: 10px;
-  margin: 0 1px 0 150px;
+  margin: 0 1px 0 20px;
   
 }
 
